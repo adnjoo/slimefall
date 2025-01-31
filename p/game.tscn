@@ -245,24 +245,26 @@ libraries = {
 }
 autoplay = "move"
 
-[node name="Coin" parent="." instance=ExtResource("1_arj47")]
-position = Vector2(-8, 20)
-
-[node name="Coin2" parent="." instance=ExtResource("1_arj47")]
-position = Vector2(136, 20)
-
-[node name="Coin3" parent="." instance=ExtResource("1_arj47")]
-position = Vector2(152, 20)
-
-[node name="Coin5" parent="." instance=ExtResource("1_arj47")]
-position = Vector2(424, -11)
-
-[node name="Coin4" parent="." instance=ExtResource("1_arj47")]
-position = Vector2(24, -93)
-
 [node name="Killzone" parent="." instance=ExtResource("5_gyyig")]
 position = Vector2(-88, 104)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 position = Vector2(72, -8)
 shape = SubResource("WorldBoundaryShape2D_h8i23")
+
+[node name="Coins" type="Node" parent="."]
+
+[node name="Coin" parent="Coins" instance=ExtResource("1_arj47")]
+position = Vector2(-8, 20)
+
+[node name="Coin2" parent="Coins" instance=ExtResource("1_arj47")]
+position = Vector2(136, 20)
+
+[node name="Coin3" parent="Coins" instance=ExtResource("1_arj47")]
+position = Vector2(152, 20)
+
+[node name="Coin5" parent="Coins" instance=ExtResource("1_arj47")]
+position = Vector2(424, -11)
+
+[node name="Coin4" parent="Coins" instance=ExtResource("1_arj47")]
+position = Vector2(24, -93)
