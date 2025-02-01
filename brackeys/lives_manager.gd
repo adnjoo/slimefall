@@ -5,12 +5,19 @@ var current_lives: int
 
 @export var start_menu: String = "res://scenes/start_menu.tscn"
 @onready var heart_container = $HBoxContainer
-@export var full_heart_texture: Texture  # Assign heart_full.png in the Inspector
-@export var empty_heart_texture: Texture  # Assign heart_empty.png in the Inspector
+@onready var sad_sound = $SadSound
+@onready var music = $Music
+@export var full_heart_texture: Texture
+@export var empty_heart_texture: Texture
+
+var music_scene_instance: Node
 
 func _ready():
 	current_lives = max_lives
 	update_hearts()
+	
+	# Connect the finished signal of the sad sound to a function
+	sad_sound.finished.connect(self._on_sad_sound_finished)
 
 func update_hearts():
 	for i in range(heart_container.get_child_count()):
@@ -27,4 +34,13 @@ func lose_life():
 
 func game_over():
 	print("Game Over!")  # Replace with your game over logic
+	sad_sound.play()
+	
+	# Stop the music when the game is over
+	music.stop()
+	
 	get_tree().change_scene_to_file(start_menu)
+
+
+func _on_sad_sound_finished() -> void:
+	music.play()
