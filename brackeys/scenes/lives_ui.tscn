@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ced8o15sik5gn" path="res://assets/sprites/heart_empty.png" id="3_qyu57"]
 
 [node name="LivesUI" type="CanvasLayer"]
+visible = false
 script = ExtResource("1_fem7l")
 full_heart_texture = ExtResource("2_k7jqf")
 empty_heart_texture = ExtResource("3_qyu57")

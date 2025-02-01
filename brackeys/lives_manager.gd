@@ -3,6 +3,7 @@ extends CanvasLayer
 @export var max_lives: int = 3
 var current_lives: int
 
+@export var start_menu: String = "res://scenes/start_menu.tscn"
 @onready var heart_container = $HBoxContainer
 @export var full_heart_texture: Texture  # Assign heart_full.png in the Inspector
 @export var empty_heart_texture: Texture  # Assign heart_empty.png in the Inspector
@@ -26,3 +27,4 @@ func lose_life():
 
 func game_over():
 	print("Game Over!")  # Replace with your game over logic
+	get_tree().change_scene_to_file(start_menu)
