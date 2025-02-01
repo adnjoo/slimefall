@@ -1,12 +1,12 @@
 [gd_scene load_steps=36 format=3 uid="uid://b7y102en8yhmj"]
 
-[ext_resource type="Script" path="res://scripts/start_menu.gd" id="1_mc1ci"]
-[ext_resource type="Texture2D" uid="uid://bxjvjhrkw77d4" path="res://assets/sprites/world_tileset.png" id="1_qqhol"]
-[ext_resource type="Texture2D" uid="uid://dnotpk670rr2m" path="res://assets/sprites/knight.png" id="2_py1hl"]
-[ext_resource type="Texture2D" uid="uid://bkmk7c8vms78c" path="res://assets/sprites/slime_green.png" id="3_pj310"]
+[ext_resource type="Script" path="res://scripts/start_menu.gd" id="1_aqlyh"]
+[ext_resource type="Texture2D" uid="uid://bxjvjhrkw77d4" path="res://assets/sprites/world_tileset.png" id="2_qieb3"]
+[ext_resource type="Texture2D" uid="uid://dnotpk670rr2m" path="res://assets/sprites/knight.png" id="3_bb5lb"]
+[ext_resource type="Texture2D" uid="uid://bkmk7c8vms78c" path="res://assets/sprites/slime_green.png" id="4_x2s81"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d1yeq"]
-texture = ExtResource("1_qqhol")
+texture = ExtResource("2_qieb3")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -177,87 +177,87 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_d1yeq")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y3ld5"]
-atlas = ExtResource("2_py1hl")
+atlas = ExtResource("3_bb5lb")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hukwj"]
-atlas = ExtResource("2_py1hl")
+atlas = ExtResource("3_bb5lb")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qyu7o"]
-atlas = ExtResource("2_py1hl")
+atlas = ExtResource("3_bb5lb")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lsa7a"]
-atlas = ExtResource("2_py1hl")
+atlas = ExtResource("3_bb5lb")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oepo5"]
-atlas = ExtResource("2_py1hl")
+atlas = ExtResource("3_bb5lb")
 region = Rect2(64, 160, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cpwnb"]
-atlas = ExtResource("2_py1hl")
+atlas = ExtResource("3_bb5lb")
 region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qiuwd"]
-atlas = ExtResource("2_py1hl")
+atlas = ExtResource("3_bb5lb")
 region = Rect2(32, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w4d20"]
-atlas = ExtResource("2_py1hl")
+atlas = ExtResource("3_bb5lb")
 region = Rect2(64, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hq17u"]
-atlas = ExtResource("2_py1hl")
+atlas = ExtResource("3_bb5lb")
 region = Rect2(96, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_371lk"]
-atlas = ExtResource("2_py1hl")
+atlas = ExtResource("3_bb5lb")
 region = Rect2(128, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2wnix"]
-atlas = ExtResource("2_py1hl")
+atlas = ExtResource("3_bb5lb")
 region = Rect2(160, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kmoy7"]
-atlas = ExtResource("2_py1hl")
+atlas = ExtResource("3_bb5lb")
 region = Rect2(192, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xvnlw"]
-atlas = ExtResource("2_py1hl")
+atlas = ExtResource("3_bb5lb")
 region = Rect2(224, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hgtg4"]
-atlas = ExtResource("2_py1hl")
+atlas = ExtResource("3_bb5lb")
 region = Rect2(0, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1sr3d"]
-atlas = ExtResource("2_py1hl")
+atlas = ExtResource("3_bb5lb")
 region = Rect2(32, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2f582"]
-atlas = ExtResource("2_py1hl")
+atlas = ExtResource("3_bb5lb")
 region = Rect2(64, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0bfo4"]
-atlas = ExtResource("2_py1hl")
+atlas = ExtResource("3_bb5lb")
 region = Rect2(96, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bd02w"]
-atlas = ExtResource("2_py1hl")
+atlas = ExtResource("3_bb5lb")
 region = Rect2(128, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vyhdr"]
-atlas = ExtResource("2_py1hl")
+atlas = ExtResource("3_bb5lb")
 region = Rect2(160, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n87k5"]
-atlas = ExtResource("2_py1hl")
+atlas = ExtResource("3_bb5lb")
 region = Rect2(192, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ur0hu"]
-atlas = ExtResource("2_py1hl")
+atlas = ExtResource("3_bb5lb")
 region = Rect2(224, 96, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hr10c"]
@@ -342,19 +342,19 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bw2ro"]
-atlas = ExtResource("3_pj310")
+atlas = ExtResource("4_x2s81")
 region = Rect2(0, 24, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8q3xx"]
-atlas = ExtResource("3_pj310")
+atlas = ExtResource("4_x2s81")
 region = Rect2(24, 24, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6gaqn"]
-atlas = ExtResource("3_pj310")
+atlas = ExtResource("4_x2s81")
 region = Rect2(48, 24, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jvxbn"]
-atlas = ExtResource("3_pj310")
+atlas = ExtResource("4_x2s81")
 region = Rect2(72, 24, 24, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ceokm"]
@@ -384,7 +384,7 @@ bg_color = Color(0.264478, 0.622589, 0.938927, 0.415686)
 
 [node name="StartMenu" type="Node2D"]
 position = Vector2(404, 296)
-script = ExtResource("1_mc1ci")
+script = ExtResource("1_aqlyh")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(0, -29)
@@ -437,4 +437,14 @@ text = "Welcome to Slimefall: The Knight's Quest
 layout_mode = 2
 text = "Start Game"
 
+[node name="AboutLink" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "by Bamboo 🎍💖"
+
+[node name="ExitButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
 [connection signal="pressed" from="Panel/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/AboutLink" to="." method="_on_about_link_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
