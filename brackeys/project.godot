@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="gamey"
-run/main_scene="res://levels/game.tscn"
+run/main_scene="res://scenes/start_menu.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Music="*res://scenes/music.tscn"
+LivesUI="*res://scenes/lives_ui.tscn"
 
 [input]
 

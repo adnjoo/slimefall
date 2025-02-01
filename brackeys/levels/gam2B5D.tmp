@@ -353,5 +353,5 @@ theme_override_font_sizes/font_size = 8
 text = "Great job!"
 
 [node name="Level Exit" parent="." instance=ExtResource("9_c3gcx")]
-position = Vector2(768, -80)
+position = Vector2(763, -67)
 collision_mask = 2

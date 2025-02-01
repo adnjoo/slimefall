@@ -4,8 +4,9 @@ extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	print("You died.")
+	if body.is_in_group("Player"):
+		LivesUI.lose_life()
 	Engine.time_scale = 0.5
-	# queue free == remove node
 	body.get_node("CollisionShape2D").queue_free()
 	timer.start()
 
