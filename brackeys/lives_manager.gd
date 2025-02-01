@@ -6,7 +6,7 @@ var current_lives: int
 @export var start_menu: String = "res://scenes/start_menu.tscn"
 @onready var heart_container = $HBoxContainer
 @onready var sad_sound = $SadSound
-@onready var music = $Music
+@onready var main_music = $MainMusic
 @export var full_heart_texture: Texture
 @export var empty_heart_texture: Texture
 
@@ -37,10 +37,12 @@ func game_over():
 	sad_sound.play()
 	
 	# Stop the music when the game is over
-	music.stop()
+	main_music.stop()
+	
+	LivesUI.visible = false
 	
 	get_tree().change_scene_to_file(start_menu)
 
 
 func _on_sad_sound_finished() -> void:
-	music.play()
+	main_music.play()
