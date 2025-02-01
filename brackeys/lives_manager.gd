@@ -43,6 +43,5 @@ func game_over():
 	
 	get_tree().change_scene_to_file(start_menu)
 
-
 func _on_sad_sound_finished() -> void:
 	main_music.play()
