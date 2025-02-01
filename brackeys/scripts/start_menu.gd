@@ -6,10 +6,7 @@ extends Node2D
 @onready var exit_button = $Panel/VBoxContainer/ExitButton  # Adjusted path to the StartButton
 
 func _ready():
-	# Connect the button's "pressed" signal to a function
-	start_button.pressed.connect(self._on_start_button_pressed)
-	about_link.pressed.connect(self._on_about_link_pressed)
-	exit_button.pressed.connect(self._on_exit_button_pressed)
+	pass
 
 # Called when the start button is pressed
 func _on_start_button_pressed():

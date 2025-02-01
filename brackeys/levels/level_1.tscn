@@ -1,6 +1,5 @@
-[gd_scene load_steps=16 format=3 uid="uid://ms0auj38b20w"]
+[gd_scene load_steps=15 format=3 uid="uid://ms0auj38b20w"]
 
-[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_ygwv5"]
 [ext_resource type="FontFile" uid="uid://cp7l06yb4imun" path="res://assets/fonts/PixelOperator8.ttf" id="2_0vmp2"]
 [ext_resource type="PackedScene" uid="uid://cth1t5i7tysuv" path="res://scenes/player.tscn" id="3_y63kr"]
 [ext_resource type="Texture2D" uid="uid://bxjvjhrkw77d4" path="res://assets/sprites/world_tileset.png" id="4_4e8as"]
@@ -221,20 +220,6 @@ _data = {
 }
 
 [node name="level_1" type="Node2D"]
-
-[node name="GameManager" type="Node" parent="."]
-unique_name_in_owner = true
-script = ExtResource("1_ygwv5")
-
-[node name="ScoreLabel" type="Label" parent="GameManager"]
-offset_left = 426.0
-offset_top = -174.0
-offset_right = 562.0
-offset_bottom = -131.0
-theme_override_colors/font_color = Color(0.173772, 0.203021, 0.705948, 1)
-theme_override_fonts/font = ExtResource("2_0vmp2")
-theme_override_font_sizes/font_size = 8
-text = "You collected X Coins."
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("3_y63kr")]
 position = Vector2(-45, -10)
