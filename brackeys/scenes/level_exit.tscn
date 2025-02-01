@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://7vuobgxnwva2"]
 
 [ext_resource type="Script" path="res://scripts/level_exit.gd" id="1_qfru0"]
-[ext_resource type="Texture2D" uid="uid://r8o30a2dr0xg" path="res://assets/sprites/platforms.png" id="2_agig7"]
+[ext_resource type="Texture2D" uid="uid://dogjrpyyi78ge" path="res://assets/sprites/sprite-0001.png" id="2_qxdmp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_euppt"]
 
@@ -12,8 +12,8 @@ script = ExtResource("1_qfru0")
 shape = SubResource("RectangleShape2D_euppt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1, 1.90735e-06)
-scale = Vector2(0.203125, 0.203125)
-texture = ExtResource("2_agig7")
+position = Vector2(-4.76837e-07, -14)
+scale = Vector2(0.878906, 0.878906)
+texture = ExtResource("2_qxdmp")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
