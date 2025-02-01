@@ -1,3 +1,7 @@
-# thingy
+# gamey
 
-123456789
+repo for games
+
+- https://adnjoo.itch.io/brackeys
+
+
