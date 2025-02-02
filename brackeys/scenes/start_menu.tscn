@@ -457,6 +457,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="SettingsPanel" type="Panel" parent="SettingsMenu"]
+layout_mode = 0
 offset_left = 17.0
 offset_top = -42.0
 offset_right = 376.0
