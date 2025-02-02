@@ -41,11 +41,20 @@ func game_over():
 	sad_sound.play()
 	
 	# Stop the music when the game is over
-	main_music.stop()
+	_set_main_music(false)
 	
 	LivesUI.visible = false
 	
 	get_tree().change_scene_to_file(start_menu)
 
 func _on_sad_sound_finished() -> void:
-	main_music.play()
+	_set_main_music(true)  # Restart music after sad sound finishes
+
+func _set_main_music(play_music: bool) -> void:
+	if main_music:
+		if play_music:
+			if not main_music.playing:
+				main_music.play()
+		else:
+			if main_music.playing:
+				main_music.stop()
