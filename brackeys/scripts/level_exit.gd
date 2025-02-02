@@ -12,6 +12,8 @@ func _on_body_entered(body):
 			call_deferred("_change_scene", level_2)  # Use deferred call to change scene
 		elif current_scene == "level_2":
 			call_deferred("_change_scene", level_3)  # Use deferred call to change scene
+		elif current_scene == "level_3":
+			print("you win")
 		else:
 			print("No next level defined for", current_scene)
 

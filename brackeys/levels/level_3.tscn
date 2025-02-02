@@ -180,7 +180,7 @@ sources/0 = SubResource("TileSetAtlasSource_7ns1w")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_h8i23"]
 
-[node name="level_2" type="Node2D"]
+[node name="level_3" type="Node2D"]
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("1_wjupg")]
 position = Vector2(-45, -10)
