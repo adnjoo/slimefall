@@ -12,6 +12,7 @@
 font_size = 24
 
 [node name="LivesUI" type="CanvasLayer"]
+visible = false
 script = ExtResource("1_fem7l")
 full_heart_texture = ExtResource("2_k7jqf")
 empty_heart_texture = ExtResource("3_qyu57")

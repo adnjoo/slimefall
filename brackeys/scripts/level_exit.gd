@@ -9,8 +9,12 @@ func _on_body_entered(body):
 		var current_scene = get_tree().current_scene.name
 		print(current_scene)
 		if current_scene == "level_1":
-			get_tree().change_scene_to_file(level_2)  # Go to level 2
+			call_deferred("_change_scene", level_2)  # Use deferred call to change scene
 		elif current_scene == "level_2":
-			get_tree().change_scene_to_file(level_3)  # Go to level 3
+			call_deferred("_change_scene", level_3)  # Use deferred call to change scene
 		else:
 			print("No next level defined for", current_scene)
+
+# Helper function to change the scene, used with call_deferred
+func _change_scene(level_path: String):
+	get_tree().change_scene_to_file(level_path)
