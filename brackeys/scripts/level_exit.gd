@@ -3,6 +3,16 @@ extends Area2D
 @export var level_2: String = "res://levels/level_2.tscn"
 @export var level_3: String = "res://levels/level_3.tscn"
 @onready var game_win = $GameWin
+@onready var portal_sprite = $PortalSprite  # Reference to the AnimatedSprite2D
+
+func _ready():
+	var current_scene = get_tree().current_scene.name
+	
+	if current_scene == "level_3":
+		portal_sprite.play("crystal")  # Switch to the crystal animation
+	else:
+		portal_sprite.play("default")  # Default animation
+
 
 func _on_body_entered(body):
 	print("entered level exit")

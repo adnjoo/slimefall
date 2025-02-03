@@ -219,7 +219,7 @@ position = Vector2(-39, 235)
 position = Vector2(-18, 238)
 
 [node name="Level Exit" parent="." instance=ExtResource("9_jctcu")]
-position = Vector2(889, -81)
+position = Vector2(887, -97)
 collision_mask = 2
 
 [node name="Enemies" type="Node" parent="."]
