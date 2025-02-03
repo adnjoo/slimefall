@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://7vuobgxnwva2"]
+[gd_scene load_steps=5 format=3 uid="uid://7vuobgxnwva2"]
 
 [ext_resource type="Script" path="res://scripts/level_exit.gd" id="1_qfru0"]
 [ext_resource type="Texture2D" uid="uid://dogjrpyyi78ge" path="res://assets/sprites/sprite-0001.png" id="2_qxdmp"]
+[ext_resource type="AudioStream" uid="uid://poyotn47lf6j" path="res://assets/sounds/game_win.mp3" id="3_d4fcr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_euppt"]
 
@@ -15,5 +16,8 @@ shape = SubResource("RectangleShape2D_euppt")
 position = Vector2(-4.76837e-07, -14)
 scale = Vector2(0.878906, 0.878906)
 texture = ExtResource("2_qxdmp")
+
+[node name="GameWin" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_d4fcr")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

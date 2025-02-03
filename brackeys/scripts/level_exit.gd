@@ -2,6 +2,7 @@ extends Area2D
 
 @export var level_2: String = "res://levels/level_2.tscn"
 @export var level_3: String = "res://levels/level_3.tscn"
+@onready var game_win = $GameWin
 
 func _on_body_entered(body):
 	print("entered level exit")
@@ -14,6 +15,7 @@ func _on_body_entered(body):
 			call_deferred("_change_scene", level_3)  # Use deferred call to change scene
 		elif current_scene == "level_3":
 			print("you win")
+			game_win.play()
 		else:
 			print("No next level defined for", current_scene)
 
