@@ -5,10 +5,10 @@ var current_lives: int
 var score: int = 0
 
 @export var start_menu: String = "res://scenes/start_menu.tscn"
-@onready var heart_container = $VBoxContainer/HBoxContainer
+@onready var heart_container = $HBoxContainer
 @onready var sad_sound = $SadSound
 @onready var main_music = $MainMusic
-@onready var score_label: Label = $VBoxContainer/ScoreContainer/ScoreLabel
+@onready var score_label: Label = $ScoreContainer/ScoreLabel
 
 @export var full_heart_texture: Texture
 @export var empty_heart_texture: Texture
