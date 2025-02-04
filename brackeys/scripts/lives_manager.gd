@@ -16,6 +16,7 @@ var score: int = 0
 var music_scene_instance: Node
 
 func _ready():
+	LivesUI.visible = false
 	reset_lives()
 
 func update_hearts():
