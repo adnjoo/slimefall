@@ -242,7 +242,7 @@ collision_mask = 2
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Slime" parent="Enemies" instance=ExtResource("8_fs1mm")]
-position = Vector2(59, 15)
+position = Vector2(59, 16)
 
 [node name="Slime2" parent="Enemies" instance=ExtResource("8_fs1mm")]
 position = Vector2(500, 31)
