@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bb2vqgattmg2o"]
+[gd_scene load_steps=10 format=3 uid="uid://bb2vqgattmg2o"]
 
 [ext_resource type="Script" path="res://scripts/lives_manager.gd" id="1_fem7l"]
 [ext_resource type="Texture2D" uid="uid://cel6tvh26pp2p" path="res://assets/sprites/heart_full.png" id="2_k7jqf"]
@@ -6,13 +6,13 @@
 [ext_resource type="AudioStream" uid="uid://0s5v80odhoxp" path="res://assets/sounds/sad-piano.wav" id="4_0i3yk"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="4_lr1fb"]
 [ext_resource type="FontFile" uid="uid://cp7l06yb4imun" path="res://assets/fonts/PixelOperator8.ttf" id="5_3nlwj"]
+[ext_resource type="Texture2D" uid="uid://jsif4mgyjmo" path="res://assets/sprites/coin.png" id="6_0v1v2"]
 [ext_resource type="AudioStream" uid="uid://c346iro815k3m" path="res://assets/music/time_for_adventure.mp3" id="6_2korr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8r4s7"]
 font_size = 24
 
 [node name="LivesUI" type="CanvasLayer"]
-visible = false
 script = ExtResource("1_fem7l")
 full_heart_texture = ExtResource("2_k7jqf")
 empty_heart_texture = ExtResource("3_qyu57")
@@ -41,14 +41,25 @@ expand_mode = 2
 layout_mode = 2
 expand_mode = 2
 
-[node name="ScoreLabel" type="Label" parent="VBoxContainer"]
+[node name="ScoreContainer" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+
+[node name="ScoreLabel" type="Label" parent="VBoxContainer/ScoreContainer"]
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.173772, 0.203021, 0.705948, 1)
 theme_override_fonts/font = ExtResource("5_3nlwj")
 theme_override_font_sizes/font_size = 8
-text = "0 🪙"
+text = "0"
 label_settings = SubResource("LabelSettings_8r4s7")
+
+[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/ScoreContainer"]
+position = Vector2(44, 11)
+scale = Vector2(2.9375, 2.9375)
+texture = ExtResource("6_0v1v2")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
 
 [node name="SadSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_0i3yk")
