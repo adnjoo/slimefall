@@ -8,7 +8,7 @@ var score: int = 0
 @onready var heart_container = $VBoxContainer/HBoxContainer
 @onready var sad_sound = $SadSound
 @onready var main_music = $MainMusic
-@onready var score_label: Label = $VBoxContainer/ScoreLabel
+@onready var score_label: Label = $VBoxContainer/ScoreContainer/ScoreLabel
 
 @export var full_heart_texture: Texture
 @export var empty_heart_texture: Texture
@@ -44,7 +44,7 @@ func add_point():
 	update_score_ui()
 	
 func update_score_ui():
-	score_label.text = str(score) + " 🪙"
+	score_label.text = str(score)
 
 func game_over():
 	print("Game Over!")  # Replace with your game over logic

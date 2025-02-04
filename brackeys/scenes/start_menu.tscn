@@ -441,10 +441,6 @@ text = "Start Game"
 layout_mode = 2
 text = "Settings"
 
-[node name="AboutLink" type="Button" parent="StartMenuPanel/VBoxContainer"]
-layout_mode = 2
-text = "by Bamboo 🎍💖"
-
 [node name="ExitButton" type="Button" parent="StartMenuPanel/VBoxContainer"]
 layout_mode = 2
 text = "Quit"
@@ -489,9 +485,16 @@ text = "Mute"
 layout_mode = 2
 text = "Back"
 
+[node name="AboutLink" type="LinkButton" parent="."]
+offset_left = 640.0
+offset_top = 263.0
+offset_right = 728.0
+offset_bottom = 286.0
+text = "by Bamboo"
+uri = "https://heybam.boo"
+
 [connection signal="pressed" from="StartMenuPanel/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="StartMenuPanel/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
-[connection signal="pressed" from="StartMenuPanel/VBoxContainer/AboutLink" to="." method="_on_about_link_pressed"]
 [connection signal="pressed" from="StartMenuPanel/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="SettingsMenu/SettingsPanel/VBoxContainer/MuteButton" to="." method="_on_mute_back_button_pressed"]
 [connection signal="pressed" from="SettingsMenu/SettingsPanel/VBoxContainer/BackButton" to="." method="_on_settings_back_button_pressed"]
