@@ -219,7 +219,7 @@ position = Vector2(-39, 235)
 position = Vector2(-18, 238)
 
 [node name="Slime" parent="." instance=ExtResource("5_uqe1c")]
-position = Vector2(60, 15)
+position = Vector2(60, 16)
 
 [node name="Level Exit" parent="." instance=ExtResource("6_iu1ln")]
 position = Vector2(886, -85)
