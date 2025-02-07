@@ -1,9 +1,10 @@
-[gd_scene load_steps=25 format=3 uid="uid://7vuobgxnwva2"]
+[gd_scene load_steps=26 format=3 uid="uid://7vuobgxnwva2"]
 
 [ext_resource type="Script" path="res://scripts/level_exit.gd" id="1_qfru0"]
 [ext_resource type="Texture2D" uid="uid://ot57nfao613e" path="res://assets/sprites/crystal.png" id="3_283hf"]
 [ext_resource type="AudioStream" uid="uid://poyotn47lf6j" path="res://assets/sounds/game_win.mp3" id="3_d4fcr"]
 [ext_resource type="Texture2D" uid="uid://cby86k5qiwv6m" path="res://assets/sprites/portal.png" id="3_xuwo3"]
+[ext_resource type="AudioStream" uid="uid://du4jjjgf8m2xa" path="res://assets/sounds/power_up.wav" id="5_p1dlr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_euppt"]
 
@@ -159,5 +160,8 @@ stream = ExtResource("3_d4fcr")
 scale = Vector2(0.5625, 0.5625)
 sprite_frames = SubResource("SpriteFrames_0umu7")
 animation = &"crystal"
+
+[node name="LevelChange" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_p1dlr")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

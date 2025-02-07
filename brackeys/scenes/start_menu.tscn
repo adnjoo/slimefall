@@ -367,7 +367,7 @@ animation = &"jump"
 autoplay = "idle"
 
 [node name="Slime2" parent="TileMap" instance=ExtResource("4_kfgfy")]
-position = Vector2(441, 320)
+position = Vector2(441, 318)
 
 [node name="StartMenuPanel" type="Panel" parent="."]
 offset_left = 17.0
