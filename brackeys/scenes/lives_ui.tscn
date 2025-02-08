@@ -29,34 +29,40 @@ volume_db = -5.0
 stream = ExtResource("6_2korr")
 autoplay = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="Panel" type="Panel" parent="."]
+offset_right = 117.0
+offset_bottom = 94.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
 custom_minimum_size = Vector2(20, 32)
+layout_mode = 0
 offset_top = 11.0
 offset_right = 185.0
 offset_bottom = 43.0
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer"]
 layout_mode = 2
 texture = ExtResource("2_k7jqf")
 expand_mode = 2
 
-[node name="TextureRect2" type="TextureRect" parent="HBoxContainer"]
+[node name="TextureRect2" type="TextureRect" parent="Panel/HBoxContainer"]
 layout_mode = 2
 texture = ExtResource("2_k7jqf")
 expand_mode = 2
 
-[node name="TextureRect3" type="TextureRect" parent="HBoxContainer"]
+[node name="TextureRect3" type="TextureRect" parent="Panel/HBoxContainer"]
 layout_mode = 2
 texture = ExtResource("2_k7jqf")
 expand_mode = 2
 
-[node name="ScoreContainer" type="HBoxContainer" parent="."]
+[node name="ScoreContainer" type="HBoxContainer" parent="Panel"]
 custom_minimum_size = Vector2(20, 20)
+layout_mode = 0
 offset_top = 60.0
 offset_right = 185.0
 offset_bottom = 90.0
 
-[node name="ScoreLabel" type="Label" parent="ScoreContainer"]
+[node name="ScoreLabel" type="Label" parent="Panel/ScoreContainer"]
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.173772, 0.203021, 0.705948, 1)
@@ -65,7 +71,7 @@ theme_override_font_sizes/font_size = 8
 text = "0"
 label_settings = SubResource("LabelSettings_8r4s7")
 
-[node name="Sprite2D" type="Sprite2D" parent="ScoreContainer"]
+[node name="Sprite2D" type="Sprite2D" parent="Panel/ScoreContainer"]
 position = Vector2(44, 11)
 scale = Vector2(2.9375, 2.9375)
 texture = ExtResource("6_0v1v2")
