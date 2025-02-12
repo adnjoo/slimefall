@@ -423,9 +423,10 @@ scale = Vector2(1.5, 1.5)
 
 [node name="WelcomeLabel" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Welcome to Slimefall: The Knight's Quest
+text = "Slimefall Quest
 "
 label_settings = SubResource("LabelSettings_e5k7l")
+horizontal_alignment = 1
 
 [node name="StartButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2

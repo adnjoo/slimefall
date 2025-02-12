@@ -1,7 +1,7 @@
 extends Node2D
 
+var GRAVITY = ProjectSettings.get_setting("physics/2d/default_gravity")
 const SPEED = 60
-const GRAVITY = 400
 var velocity = Vector2.ZERO  # Add velocity to handle gravity
 var direction = 1
 
