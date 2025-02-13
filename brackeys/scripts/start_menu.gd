@@ -40,4 +40,7 @@ func _on_settings_back_button_pressed() -> void:
 	start_menu_panel.show()
 
 func _on_mute_back_button_pressed() -> void:
-	LivesUI._set_main_music(false)
+	if LivesUI.main_music.playing:
+		LivesUI._set_main_music(false)
+	else:
+		LivesUI._set_main_music(true)
