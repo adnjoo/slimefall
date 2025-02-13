@@ -1,12 +1,12 @@
 extends Node2D
 
 @export var level_1: String = "res://levels/level_1.tscn"
-@onready var start_button = $StartMenuPanel/VBoxContainer/StartButton  # Adjusted path to the StartButton
-@onready var settings_button = $StartMenuPanel/VBoxContainer/SettingsButton  # Adjusted path to the StartButton
-@onready var about_link = $StartMenuPanel/VBoxContainer/AboutLink  # Adjusted path to the StartButton
-@onready var exit_button = $StartMenuPanel/VBoxContainer/ExitButton  # Adjusted path to the StartButton
+@onready var start_button = $VBoxContainer/StartButton  # Adjusted path to the StartButton
+@onready var settings_button = $VBoxContainer/SettingsButton  # Adjusted path to the StartButton
+@onready var exit_button = $VBoxContainer/ExitButton  # Adjusted path to the StartButton
+@onready var about_link = $AboutLink  # Adjusted path to the StartButton
+@onready var start_menu_panel = $VBoxContainer
 @onready var settings_menu = $SettingsMenu
-@onready var start_menu_panel = $StartMenuPanel
 
 func toggle_settings_menu():
 	settings_menu.visible = not settings_menu.visible
