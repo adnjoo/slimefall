@@ -9,6 +9,7 @@ var score: int = 0
 @onready var main_music = $MainMusic
 @onready var heart_container = $Panel/HBoxContainer
 @onready var score_label: Label = $Panel/ScoreContainer/ScoreLabel
+@onready var mobile_controls = $MobileControls
 
 @export var full_heart_texture: Texture
 @export var empty_heart_texture: Texture
@@ -70,3 +71,13 @@ func _set_main_music(play_music: bool) -> void:
 		else:
 			if main_music.playing:
 				main_music.stop()
+
+func _toggle_mobile_controls():
+	if mobile_controls.visible:
+		mobile_controls.visible = false
+	else:
+		mobile_controls.visible = true
+
+
+func _on_settings_button_pressed() -> void:
+	GameManager._go_to_settings()
