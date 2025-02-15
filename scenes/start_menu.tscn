@@ -341,14 +341,14 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="LabelSettings" id="LabelSettings_e5k7l"]
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
 [sub_resource type="Theme" id="Theme_l3dil"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_325my"]
 bg_color = Color(0.264478, 0.622589, 0.938927, 0.415686)
-
-[sub_resource type="LabelSettings" id="LabelSettings_e5k7l"]
-font_size = 32
-font_color = Color(0, 0, 0, 1)
 
 [node name="StartMenu" type="Node2D"]
 position = Vector2(404, 296)
@@ -373,6 +373,32 @@ autoplay = "idle"
 [node name="Slime2" parent="TileMap" instance=ExtResource("4_kfgfy")]
 position = Vector2(791, 747)
 scale = Vector2(3, 3)
+
+[node name="StartMenuContainer" type="VBoxContainer" parent="."]
+offset_left = 38.0
+offset_top = 136.0
+offset_right = 668.0
+offset_bottom = 358.0
+scale = Vector2(1.5, 1.5)
+
+[node name="WelcomeLabel" type="Label" parent="StartMenuContainer"]
+layout_mode = 2
+text = "Slimefall Quest
+"
+label_settings = SubResource("LabelSettings_e5k7l")
+horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="StartMenuContainer"]
+layout_mode = 2
+text = "Start Game"
+
+[node name="SettingsButton" type="Button" parent="StartMenuContainer"]
+layout_mode = 2
+text = "Settings"
+
+[node name="ExitButton" type="Button" parent="StartMenuContainer"]
+layout_mode = 2
+text = "Quit"
 
 [node name="SettingsMenu" type="Control" parent="."]
 visible = false
@@ -419,32 +445,6 @@ text = "Enable mobile controls"
 layout_mode = 2
 text = "Back"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 38.0
-offset_top = 136.0
-offset_right = 668.0
-offset_bottom = 358.0
-scale = Vector2(1.5, 1.5)
-
-[node name="WelcomeLabel" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "Slimefall Quest
-"
-label_settings = SubResource("LabelSettings_e5k7l")
-horizontal_alignment = 1
-
-[node name="StartButton" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "Start Game"
-
-[node name="SettingsButton" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "Settings"
-
-[node name="ExitButton" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "Quit"
-
 [node name="AboutLink" type="LinkButton" parent="."]
 offset_left = 1373.0
 offset_top = 677.0
@@ -453,9 +453,9 @@ offset_bottom = 700.0
 text = "by Bamboo"
 uri = "https://heybam.boo"
 
+[connection signal="pressed" from="StartMenuContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="StartMenuContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="StartMenuContainer/ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="SettingsMenu/SettingsPanel/VBoxContainer/MuteButton" to="." method="_on_mute_back_button_pressed"]
 [connection signal="pressed" from="SettingsMenu/SettingsPanel/VBoxContainer/MobileControlsButton" to="." method="_on_mobile_controls_button_pressed"]
 [connection signal="pressed" from="SettingsMenu/SettingsPanel/VBoxContainer/BackButton" to="." method="_on_settings_back_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
