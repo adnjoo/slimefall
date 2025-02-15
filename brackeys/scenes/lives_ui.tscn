@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bb2vqgattmg2o"]
+[gd_scene load_steps=11 format=3 uid="uid://bb2vqgattmg2o"]
 
 [ext_resource type="Script" path="res://scripts/lives_manager.gd" id="1_fem7l"]
 [ext_resource type="Texture2D" uid="uid://cel6tvh26pp2p" path="res://assets/sprites/heart_full.png" id="2_k7jqf"]
@@ -8,6 +8,7 @@
 [ext_resource type="FontFile" uid="uid://cp7l06yb4imun" path="res://assets/fonts/PixelOperator8.ttf" id="5_3nlwj"]
 [ext_resource type="Texture2D" uid="uid://jsif4mgyjmo" path="res://assets/sprites/coin.png" id="6_0v1v2"]
 [ext_resource type="AudioStream" uid="uid://c346iro815k3m" path="res://assets/music/time_for_adventure.mp3" id="6_2korr"]
+[ext_resource type="PackedScene" uid="uid://3ipuw0ar2ig4" path="res://scenes/mobile_controls.tscn" id="9_lc50s"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8r4s7"]
 font_size = 24
@@ -78,4 +79,15 @@ texture = ExtResource("6_0v1v2")
 region_enabled = true
 region_rect = Rect2(0, 0, 16, 16)
 
+[node name="MobileControls" parent="." instance=ExtResource("9_lc50s")]
+visible = false
+
+[node name="SettingsButton" type="Button" parent="."]
+offset_left = 1799.0
+offset_top = 62.0
+offset_right = 1869.0
+offset_bottom = 93.0
+text = "Settings"
+
 [connection signal="finished" from="SadSound" to="." method="_on_sad_sound_finished"]
+[connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
