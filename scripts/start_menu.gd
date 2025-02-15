@@ -3,13 +3,12 @@ extends Node2D
 @export var level_1: String = "res://levels/level_1.tscn"
 @export var lives_ui = "res://scenes/lives_ui.tscn"
 
-@onready var start_button = $VBoxContainer/StartButton  # Adjusted path to the StartButton
-@onready var settings_button = $VBoxContainer/SettingsButton  # Adjusted path to the StartButton
-@onready var exit_button = $VBoxContainer/ExitButton  # Adjusted path to the StartButton
+@onready var start_button = $StartMenuContainer/StartButton  # Adjusted path to the StartButton
+@onready var settings_button = $StartMenuContainer/SettingsButton  # Adjusted path to the StartButton
+@onready var exit_button = $StartMenuContainer/ExitButton  # Adjusted path to the StartButton
+@onready var start_menu_panel = $StartMenuContainer
 @onready var about_link = $AboutLink  # Adjusted path to the StartButton
-@onready var start_menu_panel = $VBoxContainer
 @onready var settings_menu = $SettingsMenu
-
 
 func toggle_settings_menu():
 	settings_menu.visible = not settings_menu.visible
