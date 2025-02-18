@@ -211,13 +211,13 @@ shape = SubResource("WorldBoundaryShape2D_h8i23")
 [node name="Coins" type="Node" parent="."]
 
 [node name="Coin" parent="Coins" instance=ExtResource("4_mgy0t")]
-position = Vector2(-53, 237)
+position = Vector2(168, -10)
 
 [node name="Coin2" parent="Coins" instance=ExtResource("4_mgy0t")]
-position = Vector2(-39, 235)
+position = Vector2(424, -166)
 
 [node name="Coin3" parent="Coins" instance=ExtResource("4_mgy0t")]
-position = Vector2(-18, 238)
+position = Vector2(552, -166)
 
 [node name="Level Exit" parent="." instance=ExtResource("6_iu1ln")]
 position = Vector2(889, -86)
