@@ -10,6 +10,7 @@ var score: int = 0
 @onready var heart_container = $Panel/HBoxContainer
 @onready var score_label: Label = $Panel/ScoreContainer/ScoreLabel
 @onready var mobile_controls = $MobileControls
+@onready var win_label: Label = $WinLabel
 
 @export var full_heart_texture: Texture
 @export var empty_heart_texture: Texture
@@ -17,7 +18,7 @@ var score: int = 0
 var music_scene_instance: Node
 
 func _ready():
-	LivesUI.visible = false
+	LivesUI.visible = true
 	reset_lives()
 
 func update_hearts():
