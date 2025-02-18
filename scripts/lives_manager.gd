@@ -1,8 +1,7 @@
 extends CanvasLayer
 
 @export var max_lives: int = 3
-var current_lives: int
-var score: int = 0
+@export var current_lives: int
 
 @export var start_menu: String = "res://scenes/start_menu.tscn"
 @onready var sad_sound = $SadSound
@@ -10,7 +9,9 @@ var score: int = 0
 @onready var heart_container = $Panel/HBoxContainer
 @onready var score_label: Label = $Panel/ScoreContainer/ScoreLabel
 @onready var mobile_controls = $MobileControls
-@onready var win_label: Label = $WinLabel
+
+@onready var vbox_container = $VBoxContainer
+@onready var win_label2: Label = $VBoxContainer/WinLabel2
 
 @export var full_heart_texture: Texture
 @export var empty_heart_texture: Texture
@@ -32,7 +33,7 @@ func reset_lives():
 	update_hearts()
 	
 func reset_points():
-	score = 0
+	GameManager.score = 0
 	update_score_ui()
 
 func lose_life():
@@ -43,14 +44,14 @@ func lose_life():
 			game_over()
 
 func add_point():
-	score += 1
+	GameManager.score += 1
 	update_score_ui()
 	
 func update_score_ui():
-	score_label.text = str(score)
+	score_label.text = str(GameManager.score)
 
 func game_over():
-	print("Game Over!")  # Replace with your game over logic
+	print("Game Over!") # Replace with your game over logic
 	sad_sound.play()
 	reset_points()
 	
