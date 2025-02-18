@@ -10,6 +10,9 @@ extends Node2D
 @onready var about_link = $AboutLink  # Adjusted path to the StartButton
 @onready var settings_menu = $SettingsMenu
 
+func _ready():
+	LivesUI.visible = false
+	
 func toggle_settings_menu():
 	settings_menu.visible = not settings_menu.visible
 	get_tree().paused = settings_menu.visible  # Pause game when settings is open

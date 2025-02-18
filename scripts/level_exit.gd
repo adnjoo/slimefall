@@ -2,7 +2,7 @@ extends Area2D
 
 @export var level_2: String = "res://levels/level_2.tscn"
 @export var level_3: String = "res://levels/level_3.tscn"
-@onready var game_win = $GameWin
+@onready var game_win: AudioStreamPlayer2D = $GameWin
 @onready var portal_sprite = $PortalSprite  # Reference to the AnimatedSprite2D
 @onready var power_up_sound = $LevelChange  # Reference to the sound effect
 
@@ -30,6 +30,7 @@ func _on_body_entered(body):
 		elif current_scene == "level_3":
 			print("you win")
 			game_win.play()
+			LivesUI.win_label.visible = true
 		else:
 			print("No next level defined for", current_scene)
 
