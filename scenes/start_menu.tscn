@@ -383,7 +383,7 @@ scale = Vector2(1.5, 1.5)
 
 [node name="WelcomeLabel" type="Label" parent="StartMenuContainer"]
 layout_mode = 2
-text = "Slimefall Quest
+text = "Slimefall
 "
 label_settings = SubResource("LabelSettings_e5k7l")
 horizontal_alignment = 1
