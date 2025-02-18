@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://b7y102en8yhmj"]
+[gd_scene load_steps=33 format=3 uid="uid://b7y102en8yhmj"]
 
 [ext_resource type="Script" path="res://scripts/start_menu.gd" id="1_aqlyh"]
 [ext_resource type="Texture2D" uid="uid://bxjvjhrkw77d4" path="res://assets/sprites/world_tileset.png" id="2_qieb3"]
@@ -350,6 +350,9 @@ font_color = Color(0, 0, 0, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_325my"]
 bg_color = Color(0.264478, 0.622589, 0.938927, 0.415686)
 
+[sub_resource type="LabelSettings" id="LabelSettings_5uvr3"]
+font_size = 32
+
 [node name="StartMenu" type="Node2D"]
 position = Vector2(404, 296)
 script = ExtResource("1_aqlyh")
@@ -432,6 +435,8 @@ grow_vertical = 2
 [node name="SettingsLabel" type="Label" parent="SettingsMenu/SettingsPanel/VBoxContainer"]
 layout_mode = 2
 text = "Settings"
+label_settings = SubResource("LabelSettings_5uvr3")
+horizontal_alignment = 1
 
 [node name="MuteButton" type="Button" parent="SettingsMenu/SettingsPanel/VBoxContainer"]
 layout_mode = 2
