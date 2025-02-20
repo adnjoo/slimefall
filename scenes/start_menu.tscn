@@ -399,7 +399,7 @@ offset_left = 37.0
 offset_top = 27.0
 offset_right = 977.0
 offset_bottom = 72.0
-text = "hi score"
+text = "Your hi score is:"
 label_settings = SubResource("LabelSettings_cfnyd")
 
 [node name="StartMenuContainer" type="VBoxContainer" parent="."]
