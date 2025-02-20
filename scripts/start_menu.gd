@@ -31,9 +31,6 @@ func _on_start_button_pressed():
 func _on_about_link_pressed() -> void:
 	var url = "https://www.heybam.boo"  # Replace with the URL you want to open
 	OS.shell_open(url)
-	
-func _on_exit_button_pressed() -> void:
-	get_tree().quit()  # Quit the game
 
 # Settings
 func _on_settings_button_pressed() -> void:
@@ -52,3 +49,7 @@ func _on_mute_back_button_pressed() -> void:
 
 func _on_mobile_controls_button_pressed() -> void:
 	LivesUI._toggle_mobile_controls()
+
+
+func _on_hi_scores_button_pressed() -> void:
+	print("show hi scores")
