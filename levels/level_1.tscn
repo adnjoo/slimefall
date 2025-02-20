@@ -251,33 +251,43 @@ shape = SubResource("WorldBoundaryShape2D_h8i23")
 
 [node name="Coin" parent="Coins" instance=ExtResource("6_5lknd")]
 position = Vector2(-8, 20)
+coin_id = "11"
 
 [node name="Coin2" parent="Coins" instance=ExtResource("6_5lknd")]
 position = Vector2(136, 20)
+coin_id = "12"
 
 [node name="Coin3" parent="Coins" instance=ExtResource("6_5lknd")]
 position = Vector2(152, 20)
+coin_id = "13"
 
 [node name="Coin4" parent="Coins" instance=ExtResource("6_5lknd")]
 position = Vector2(24, -93)
+coin_id = "14"
 
 [node name="Coin5" parent="Coins" instance=ExtResource("6_5lknd")]
 position = Vector2(424, -11)
+coin_id = "15"
 
 [node name="Coin6" parent="Coins" instance=ExtResource("6_5lknd")]
 position = Vector2(680, -73)
+coin_id = "16"
 
 [node name="Coin7" parent="Coins" instance=ExtResource("6_5lknd")]
 position = Vector2(696, -73)
+coin_id = "17"
 
 [node name="Coin8" parent="Coins" instance=ExtResource("6_5lknd")]
 position = Vector2(713, -74)
+coin_id = "181"
 
 [node name="Coin9" parent="Coins" instance=ExtResource("6_5lknd")]
 position = Vector2(505, -150)
+coin_id = "19"
 
 [node name="Coin10" parent="Coins" instance=ExtResource("6_5lknd")]
 position = Vector2(433, -151)
+coin_id = "110"
 
 [node name="Platforms" type="Node" parent="."]
 
