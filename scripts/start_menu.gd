@@ -21,6 +21,7 @@ func toggle_settings_menu():
 
 # Separate the game start logic into a new function
 func start_game():
+	LivesUI.vbox_container.visible = false
 	LivesUI.reset_lives()
 	LivesUI.visible = true
 	Engine.time_scale = 1.0
