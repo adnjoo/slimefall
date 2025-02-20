@@ -279,7 +279,7 @@ coin_id = "17"
 
 [node name="Coin8" parent="Coins" instance=ExtResource("6_5lknd")]
 position = Vector2(713, -74)
-coin_id = "181"
+coin_id = "18"
 
 [node name="Coin9" parent="Coins" instance=ExtResource("6_5lknd")]
 position = Vector2(505, -150)

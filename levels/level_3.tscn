@@ -213,12 +213,15 @@ shape = SubResource("WorldBoundaryShape2D_h8i23")
 
 [node name="Coin" parent="Coins" instance=ExtResource("4_mgy0t")]
 position = Vector2(168, -10)
+coin_id = "31"
 
 [node name="Coin2" parent="Coins" instance=ExtResource("4_mgy0t")]
 position = Vector2(424, -166)
+coin_id = "32"
 
 [node name="Coin3" parent="Coins" instance=ExtResource("4_mgy0t")]
 position = Vector2(552, -166)
+coin_id = "33"
 
 [node name="Level Exit" parent="." instance=ExtResource("6_iu1ln")]
 position = Vector2(889, -86)
