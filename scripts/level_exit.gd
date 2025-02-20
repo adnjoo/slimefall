@@ -17,7 +17,6 @@ func _ready():
 	else:
 		portal_sprite.play("default")  # Default animation
 
-
 func _on_body_entered(body):
 	print("entered level exit")
 	if body.is_in_group("Player"):  # Ensure player has the "Player" group
@@ -34,6 +33,10 @@ func _on_body_entered(body):
 			print("you win")
 			
 			game_win.play()
+			
+			# Save high score using GameManager.score
+			GameManager.save_high_score(GameManager.score)
+
 			LivesUI.win_label2.text = "Your score is: " + str(GameManager.score)
 			LivesUI.vbox_container.visible = true
 

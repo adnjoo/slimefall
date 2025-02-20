@@ -5,13 +5,15 @@ extends Node2D
 
 @onready var start_button = $StartMenuContainer/StartButton  # Adjusted path to the StartButton
 @onready var settings_button = $StartMenuContainer/SettingsButton  # Adjusted path to the StartButton
-@onready var exit_button = $StartMenuContainer/ExitButton  # Adjusted path to the StartButton
 @onready var start_menu_panel = $StartMenuContainer
 @onready var about_link = $AboutLink  # Adjusted path to the StartButton
 @onready var settings_menu = $SettingsMenu
 
+@onready var hi_score_label = $HiScoreLabel
+
 func _ready():
 	LivesUI.visible = false
+	hi_score_label.text = "Your Hi Score: " + str(GameManager.high_score)
 	
 func toggle_settings_menu():
 	settings_menu.visible = not settings_menu.visible
@@ -31,9 +33,6 @@ func _on_start_button_pressed():
 func _on_about_link_pressed() -> void:
 	var url = "https://www.heybam.boo"  # Replace with the URL you want to open
 	OS.shell_open(url)
-	
-func _on_exit_button_pressed() -> void:
-	get_tree().quit()  # Quit the game
 
 # Settings
 func _on_settings_button_pressed() -> void:
@@ -52,3 +51,6 @@ func _on_mute_back_button_pressed() -> void:
 
 func _on_mobile_controls_button_pressed() -> void:
 	LivesUI._toggle_mobile_controls()
+
+func _on_hi_scores_button_pressed() -> void:
+	print(GameManager.high_score)

@@ -80,6 +80,5 @@ func _toggle_mobile_controls():
 	else:
 		mobile_controls.visible = true
 
-
 func _on_settings_button_pressed() -> void:
 	GameManager._go_to_settings()
