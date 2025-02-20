@@ -9,6 +9,9 @@ extends Area2D
 @onready var portal_sprite = $PortalSprite  # Reference to the AnimatedSprite2D
 @onready var power_up_sound = $LevelChange  # Reference to the sound effect
 
+const SAVE_PATH = "user://high_scores.cfg"
+var high_score: int = 0
+
 func _ready():
 	var current_scene = get_tree().current_scene.name
 	
@@ -16,7 +19,9 @@ func _ready():
 		portal_sprite.play("crystal")  # Switch to the crystal animation
 	else:
 		portal_sprite.play("default")  # Default animation
-
+	
+	# Load high score
+	load_high_score()
 
 func _on_body_entered(body):
 	print("entered level exit")
@@ -34,6 +39,10 @@ func _on_body_entered(body):
 			print("you win")
 			
 			game_win.play()
+			
+			# Save high score using GameManager.score
+			save_high_score(GameManager.score)
+
 			LivesUI.win_label2.text = "Your score is: " + str(GameManager.score)
 			LivesUI.vbox_container.visible = true
 
@@ -53,3 +62,18 @@ func _play_power_up_and_change(level_path: String):
 	power_up_sound.play()
 	await power_up_sound.finished  # Wait for sound to finish before changing scene
 	_change_scene(level_path)
+
+# Load the high score from file
+func load_high_score():
+	var file = FileAccess.open(SAVE_PATH, FileAccess.READ)
+	if file:
+		high_score = int(file.get_line())  # Read saved high score
+		file.close()
+
+# Save the new high score if it's higher
+func save_high_score(current_score: int):
+	if current_score > high_score:
+		high_score = current_score  # Update high score
+		var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
+		file.store_line(str(high_score))  # Save the high score
+		file.close()

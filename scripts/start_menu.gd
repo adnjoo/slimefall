@@ -5,7 +5,6 @@ extends Node2D
 
 @onready var start_button = $StartMenuContainer/StartButton  # Adjusted path to the StartButton
 @onready var settings_button = $StartMenuContainer/SettingsButton  # Adjusted path to the StartButton
-@onready var exit_button = $StartMenuContainer/ExitButton  # Adjusted path to the StartButton
 @onready var start_menu_panel = $StartMenuContainer
 @onready var about_link = $AboutLink  # Adjusted path to the StartButton
 @onready var settings_menu = $SettingsMenu
@@ -49,7 +48,6 @@ func _on_mute_back_button_pressed() -> void:
 
 func _on_mobile_controls_button_pressed() -> void:
 	LivesUI._toggle_mobile_controls()
-
 
 func _on_hi_scores_button_pressed() -> void:
 	print("show hi scores")
