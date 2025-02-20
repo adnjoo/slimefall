@@ -399,10 +399,6 @@ text = "Start Game"
 layout_mode = 2
 text = "Settings"
 
-[node name="ExitButton" type="Button" parent="StartMenuContainer"]
-layout_mode = 2
-text = "Quit"
-
 [node name="SettingsMenu" type="Control" parent="."]
 visible = false
 layout_mode = 3
@@ -460,7 +456,6 @@ uri = "https://heybam.boo"
 
 [connection signal="pressed" from="StartMenuContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="StartMenuContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
-[connection signal="pressed" from="StartMenuContainer/ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="SettingsMenu/SettingsPanel/VBoxContainer/MuteButton" to="." method="_on_mute_back_button_pressed"]
 [connection signal="pressed" from="SettingsMenu/SettingsPanel/VBoxContainer/MobileControlsButton" to="." method="_on_mobile_controls_button_pressed"]
 [connection signal="pressed" from="SettingsMenu/SettingsPanel/VBoxContainer/BackButton" to="." method="_on_settings_back_button_pressed"]
