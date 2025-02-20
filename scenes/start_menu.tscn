@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://b7y102en8yhmj"]
+[gd_scene load_steps=35 format=3 uid="uid://b7y102en8yhmj"]
 
 [ext_resource type="Script" path="res://scripts/start_menu.gd" id="1_aqlyh"]
 [ext_resource type="Texture2D" uid="uid://bxjvjhrkw77d4" path="res://assets/sprites/world_tileset.png" id="2_qieb3"]
@@ -345,6 +345,10 @@ animations = [{
 font_size = 130
 font_color = Color(0, 0, 0, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_cfnyd"]
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
 [sub_resource type="Theme" id="Theme_l3dil"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pbry5"]
@@ -390,6 +394,14 @@ text = "Slimefall
 label_settings = SubResource("LabelSettings_e5k7l")
 horizontal_alignment = 1
 
+[node name="HiScoreLabel" type="Label" parent="."]
+offset_left = 37.0
+offset_top = 27.0
+offset_right = 977.0
+offset_bottom = 72.0
+text = "hi score"
+label_settings = SubResource("LabelSettings_cfnyd")
+
 [node name="StartMenuContainer" type="VBoxContainer" parent="."]
 offset_left = 38.0
 offset_top = 135.0
@@ -406,9 +418,9 @@ layout_mode = 2
 text = "Settings"
 
 [node name="HiScoreButton" type="Button" parent="StartMenuContainer"]
+visible = false
 layout_mode = 2
-text = "High Scores
-"
+text = "Hi Score"
 
 [node name="SettingsMenu" type="Control" parent="."]
 visible = false
