@@ -5,6 +5,15 @@ extends Node
 @export var SAVE_PATH = "user://high_scores.cfg"
 @export var high_score = 0
 
+@export var collected_coins = {}  # Dictionary to track collected coins
+
+func collect_coin(coin_id: String):
+	collected_coins[coin_id] = true  # Mark coin as collected
+
+func is_coin_collected(coin_id: String) -> bool:
+	#print("coin_id " + coin_id)
+	return collected_coins.get(coin_id, false)  # Return if the coin was collected
+
 func _ready():
 	GameManager.load_high_score()
 
