@@ -11,7 +11,6 @@ func collect_coin(coin_id: String):
 	collected_coins[coin_id] = true  # Mark coin as collected
 
 func is_coin_collected(coin_id: String) -> bool:
-	#print("coin_id " + coin_id)
 	return collected_coins.get(coin_id, false)  # Return if the coin was collected
 
 func _ready():

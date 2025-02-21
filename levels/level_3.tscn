@@ -216,11 +216,11 @@ position = Vector2(168, -10)
 coin_id = "31"
 
 [node name="Coin2" parent="Coins" instance=ExtResource("4_mgy0t")]
-position = Vector2(424, -166)
+position = Vector2(424, -168)
 coin_id = "32"
 
 [node name="Coin3" parent="Coins" instance=ExtResource("4_mgy0t")]
-position = Vector2(552, -166)
+position = Vector2(552, -168)
 coin_id = "33"
 
 [node name="Level Exit" parent="." instance=ExtResource("6_iu1ln")]
