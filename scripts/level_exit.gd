@@ -39,6 +39,10 @@ func _on_body_entered(body):
 
 			LivesUI.win_label2.text = "Your score is: " + str(GameManager.score)
 			LivesUI.vbox_container.visible = true
+			
+			# Reset coins/score
+			GameManager.collected_coins = {}
+			LivesUI.reset_points()
 
 			# Wait for 3 seconds before returning to start menu
 			await get_tree().create_timer(3).timeout
