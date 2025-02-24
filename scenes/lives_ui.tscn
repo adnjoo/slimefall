@@ -91,6 +91,7 @@ region_enabled = true
 region_rect = Rect2(0, 0, 16, 16)
 
 [node name="MobileControls" parent="." instance=ExtResource("9_lc50s")]
+visible = false
 
 [node name="SettingsButton" type="Button" parent="."]
 offset_left = 1843.0
