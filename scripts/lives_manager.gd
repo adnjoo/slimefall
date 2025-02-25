@@ -60,6 +60,9 @@ func game_over():
 	
 	LivesUI.visible = false
 	
+	# Reset coins
+	GameManager.collected_coins = {}
+	
 	get_tree().change_scene_to_file(start_menu)
 
 func _on_sad_sound_finished() -> void:
