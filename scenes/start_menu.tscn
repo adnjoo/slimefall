@@ -464,6 +464,7 @@ layout_mode = 2
 text = "Mute/Unmute"
 
 [node name="MobileControlsButton" type="Button" parent="SettingsMenu/SettingsPanel/VBoxContainer"]
+visible = false
 layout_mode = 2
 text = "Enable mobile controls"
 

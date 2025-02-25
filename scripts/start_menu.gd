@@ -24,6 +24,8 @@ func start_game():
 	LivesUI.vbox_container.visible = false
 	LivesUI.reset_lives()
 	LivesUI.visible = true
+	LivesUI.mobile_controls.visible = true
+	
 	Engine.time_scale = 1.0
 	get_tree().change_scene_to_file(level_1)
 
@@ -50,8 +52,8 @@ func _on_mute_back_button_pressed() -> void:
 	else:
 		LivesUI._set_main_music(true)
 
-func _on_mobile_controls_button_pressed() -> void:
-	LivesUI._toggle_mobile_controls()
+#func _on_mobile_controls_button_pressed() -> void:
+	#LivesUI._toggle_mobile_controls()
 
 func _on_hi_scores_button_pressed() -> void:
 	print(GameManager.high_score)

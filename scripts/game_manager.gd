@@ -22,6 +22,7 @@ func _input(event):
 
 func _go_to_settings():
 	get_tree().change_scene_to_file(start_menu)
+	LivesUI.mobile_controls.visible = false
 
 func load_high_score():
 	var file = FileAccess.open(SAVE_PATH, FileAccess.READ)

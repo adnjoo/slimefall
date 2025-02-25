@@ -1,4 +1,6 @@
-# Brackeys
+# Slimefall - Brackeys
+
+![Game Icon](assets/misc/icon.png)
 
 ## Quickstart Guide
 

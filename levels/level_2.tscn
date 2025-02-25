@@ -228,19 +228,19 @@ shape = SubResource("WorldBoundaryShape2D_h8i23")
 [node name="Coins" type="Node" parent="."]
 
 [node name="Coin" parent="Coins" instance=ExtResource("6_nii34")]
-position = Vector2(104, -24)
+position = Vector2(104, -11)
 coin_id = "21"
 
 [node name="Coin2" parent="Coins" instance=ExtResource("6_nii34")]
-position = Vector2(312, -110)
+position = Vector2(312, -107)
 coin_id = "22"
 
 [node name="Coin3" parent="Coins" instance=ExtResource("6_nii34")]
-position = Vector2(376, -142)
+position = Vector2(376, -139)
 coin_id = "23"
 
 [node name="Level Exit" parent="." instance=ExtResource("9_jctcu")]
-position = Vector2(887, -90)
+position = Vector2(892, -96)
 collision_mask = 2
 
 [node name="Enemies" type="Node" parent="."]
@@ -249,7 +249,7 @@ collision_mask = 2
 position = Vector2(59, 16)
 
 [node name="Slime2" parent="Enemies" instance=ExtResource("8_fs1mm")]
-position = Vector2(500, 31)
+position = Vector2(500, 32)
 
 [node name="Slime3" parent="Enemies" instance=ExtResource("8_fs1mm")]
-position = Vector2(450, -145)
+position = Vector2(450, -144)
