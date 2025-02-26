@@ -39,6 +39,12 @@ func save_high_score(current_score: int):
 		file.close()
 
 func handle_game_end(is_win: bool):
+	"""
+	Handles the game-over or game-win logic.
+
+	Args:
+		is_win (bool): If true, handles the win scenario; otherwise, handles game over.
+	"""
 	LivesUI._set_main_music(false)  # Stop music
 	collected_coins = {}  # Reset collected coins
 	LivesUI.reset_points()  # Reset points
