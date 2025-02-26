@@ -6,6 +6,8 @@ extends CanvasLayer
 @export var start_menu: String = "res://scenes/start_menu.tscn"
 @onready var sad_sound = $SadSound
 @onready var main_music = $MainMusic
+@onready var game_win: AudioStreamPlayer2D = $GameWin
+
 @onready var heart_container = $Panel/HBoxContainer
 @onready var score_label: Label = $Panel/ScoreContainer/ScoreLabel
 @onready var mobile_controls = $MobileControls
@@ -52,18 +54,7 @@ func update_score_ui():
 
 func game_over():
 	print("Game Over!") # Replace with your game over logic
-	sad_sound.play()
-	reset_points()
-	
-	# Stop the music when the game is over
-	_set_main_music(false)
-	
-	LivesUI.visible = false
-	
-	# Reset coins
-	GameManager.collected_coins = {}
-	
-	get_tree().change_scene_to_file(start_menu)
+	GameManager.handle_game_end(false) # Use shared function for game over
 
 func _on_sad_sound_finished() -> void:
 	_set_main_music(true)  # Restart music after sad sound finishes

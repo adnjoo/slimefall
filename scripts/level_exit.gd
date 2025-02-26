@@ -5,7 +5,6 @@ extends Area2D
 @export var start_menu: String = "res://scenes/start_menu.tscn"
 @export var lives_manager = "res://scripts/lives_manager.gd"
 
-@onready var game_win: AudioStreamPlayer2D = $GameWin
 @onready var portal_sprite = $PortalSprite  # Reference to the AnimatedSprite2D
 @onready var power_up_sound = $LevelChange  # Reference to the sound effect
 
@@ -31,23 +30,7 @@ func _on_body_entered(body):
 			_play_power_up_and_change(level_3)
 		elif current_scene == "level_3":
 			print("you win")
-			
-			game_win.play()
-			
-			# Save high score using GameManager.score
-			GameManager.save_high_score(GameManager.score)
-
-			LivesUI.win_label2.text = "Your score is: " + str(GameManager.score)
-			LivesUI.vbox_container.visible = true
-			
-			# Reset coins/score
-			GameManager.collected_coins = {}
-			LivesUI.reset_points()
-
-			# Wait for 3 seconds before returning to start menu
-			await get_tree().create_timer(3).timeout
-			_change_scene(start_menu)  # Change to the start menu after the delay
-
+			GameManager.handle_game_end(true) # Use shared function for game win
 		else:
 			print("No next level defined for", current_scene)
 

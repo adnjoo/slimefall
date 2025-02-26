@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bb2vqgattmg2o"]
+[gd_scene load_steps=14 format=3 uid="uid://bb2vqgattmg2o"]
 
 [ext_resource type="Script" path="res://scripts/lives_manager.gd" id="1_fem7l"]
 [ext_resource type="Texture2D" uid="uid://cel6tvh26pp2p" path="res://assets/sprites/heart_full.png" id="2_k7jqf"]
@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://c346iro815k3m" path="res://assets/music/time_for_adventure.mp3" id="6_2korr"]
 [ext_resource type="PackedScene" uid="uid://3ipuw0ar2ig4" path="res://scenes/mobile_controls.tscn" id="9_lc50s"]
 [ext_resource type="Texture2D" uid="uid://d25cgfd0y5d02" path="res://assets/sprites/UI/gear.png" id="10_7j754"]
+[ext_resource type="AudioStream" uid="uid://poyotn47lf6j" path="res://assets/sounds/game_win.mp3" id="11_hv1vy"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8r4s7"]
 font_size = 24
@@ -122,6 +123,9 @@ text = "Your score is: "
 label_settings = SubResource("LabelSettings_sgt62")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="GameWin" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_hv1vy")
 
 [connection signal="finished" from="SadSound" to="." method="_on_sad_sound_finished"]
 [connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
