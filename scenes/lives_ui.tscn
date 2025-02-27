@@ -44,7 +44,7 @@ offset_bottom = 94.0
 layout_mode = 0
 offset_right = 128.0
 offset_bottom = 92.0
-color = Color(0, 0, 0, 1)
+color = Color(0.574998, 0.574998, 0.574998, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
 custom_minimum_size = Vector2(20, 32)
