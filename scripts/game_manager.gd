@@ -46,8 +46,6 @@ func handle_game_end(is_win: bool):
 		is_win (bool): If true, handles the win scenario; otherwise, handles game over.
 	"""
 	LivesUI._set_main_music(false)  # Stop music
-	collected_coins = {}  # Reset collected coins
-	LivesUI.reset_points()  # Reset points
 	
 	if is_win:
 		LivesUI.game_win.play()
@@ -59,4 +57,10 @@ func handle_game_end(is_win: bool):
 		LivesUI.sad_sound.play()
 		LivesUI.visible = false
 
+	collected_coins = {}  # Reset collected coins
+	LivesUI.reset_points()  # Reset points
+
 	get_tree().change_scene_to_file(start_menu)
+	
+	await get_tree().create_timer(1).timeout
+	LivesUI._set_main_music(true)
