@@ -1,8 +1,8 @@
 extends Node
 
 @export var start_menu: String = "res://scenes/start_menu.tscn"
-@export var score: int = 0
 @export var SAVE_PATH = "user://high_scores.cfg"
+@export var score: int = 0
 @export var high_score = 0
 
 @export var collected_coins = {}  # Dictionary to track collected coins

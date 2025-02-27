@@ -1,9 +1,8 @@
 extends CharacterBody2D
 
+var GRAVITY = Globals.GRAVITY
 const SPEED = 100.0
 const JUMP_VELOCITY = -350.0
-
-var gravity = Globals.GRAVITY
 var can_move = true  # Controls whether player input is allowed
 
 @onready var animated_sprite = $AnimatedSprite2D
@@ -17,7 +16,7 @@ func _physics_process(delta: float) -> void:
 	
 	# Add gravity.
 	if not is_on_floor():
-		velocity.y += gravity * delta
+		velocity.y += GRAVITY * delta
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():

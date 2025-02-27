@@ -1,6 +1,5 @@
-[gd_scene load_steps=15 format=3 uid="uid://ms0auj38b20w"]
+[gd_scene load_steps=14 format=3 uid="uid://ms0auj38b20w"]
 
-[ext_resource type="FontFile" uid="uid://cp7l06yb4imun" path="res://assets/fonts/PixelOperator8.ttf" id="2_0vmp2"]
 [ext_resource type="PackedScene" uid="uid://cth1t5i7tysuv" path="res://scenes/player.tscn" id="3_y63kr"]
 [ext_resource type="Texture2D" uid="uid://bxjvjhrkw77d4" path="res://assets/sprites/world_tileset.png" id="4_4e8as"]
 [ext_resource type="PackedScene" uid="uid://hy3nbdnrxqj4" path="res://scenes/killzone.tscn" id="5_02x7y"]
@@ -305,48 +304,6 @@ autoplay = "move"
 
 [node name="Slime" parent="." instance=ExtResource("8_y2k2l")]
 position = Vector2(452, 32)
-
-[node name="Labels" type="Node" parent="."]
-
-[node name="Label" type="Label" parent="Labels"]
-offset_left = -196.0
-offset_top = 14.0
-offset_right = -105.0
-offset_bottom = 57.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("2_0vmp2")
-theme_override_font_sizes/font_size = 8
-text = "Space to jump."
-
-[node name="Label2" type="Label" parent="Labels"]
-offset_left = 300.0
-offset_top = 22.0
-offset_right = 396.0
-offset_bottom = 65.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("2_0vmp2")
-theme_override_font_sizes/font_size = 8
-text = "Falling hurts..."
-
-[node name="Label3" type="Label" parent="Labels"]
-offset_left = 619.0
-offset_top = -97.0
-offset_right = 715.0
-offset_bottom = -83.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("2_0vmp2")
-theme_override_font_sizes/font_size = 8
-text = "Almost there..."
-
-[node name="Label4" type="Label" parent="Labels"]
-offset_left = 444.0
-offset_top = -208.0
-offset_right = 540.0
-offset_bottom = -165.0
-theme_override_colors/font_color = Color(0.173772, 0.203021, 0.705948, 1)
-theme_override_fonts/font = ExtResource("2_0vmp2")
-theme_override_font_sizes/font_size = 8
-text = "Great job!"
 
 [node name="Level Exit" parent="." instance=ExtResource("9_s63pj")]
 position = Vector2(765, -80)
