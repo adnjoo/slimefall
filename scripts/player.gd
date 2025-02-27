@@ -3,7 +3,7 @@ extends CharacterBody2D
 const SPEED = 100.0
 const JUMP_VELOCITY = -350.0
 
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+var gravity = Globals.GRAVITY
 var can_move = true  # Controls whether player input is allowed
 
 @onready var animated_sprite = $AnimatedSprite2D

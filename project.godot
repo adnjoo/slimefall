@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 LivesUI="*res://scenes/lives_ui.tscn"
 GameManager="*res://scripts/game_manager.gd"
+Globals="*res://scripts/globals.gd"
 
 [display]
 
