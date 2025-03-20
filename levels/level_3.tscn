@@ -218,10 +218,6 @@ coin_id = "31"
 position = Vector2(424, -171)
 coin_id = "32"
 
-[node name="Coin3" parent="Coins" instance=ExtResource("4_mgy0t")]
-position = Vector2(552, -171)
-coin_id = "33"
-
 [node name="Coin4" parent="Coins" instance=ExtResource("4_mgy0t")]
 position = Vector2(120, -107)
 coin_id = "33"

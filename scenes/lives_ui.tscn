@@ -1,10 +1,10 @@
 [gd_scene load_steps=14 format=3 uid="uid://bb2vqgattmg2o"]
 
-[ext_resource type="Script" path="res://scripts/lives_manager.gd" id="1_fem7l"]
+[ext_resource type="Script" uid="uid://dr5mmao5vwq5o" path="res://scripts/lives_manager.gd" id="1_fem7l"]
 [ext_resource type="Texture2D" uid="uid://cel6tvh26pp2p" path="res://assets/sprites/heart_full.png" id="2_k7jqf"]
 [ext_resource type="Texture2D" uid="uid://ced8o15sik5gn" path="res://assets/sprites/heart_empty.png" id="3_qyu57"]
 [ext_resource type="AudioStream" uid="uid://0s5v80odhoxp" path="res://assets/sounds/sad-piano.wav" id="4_0i3yk"]
-[ext_resource type="Script" path="res://scripts/game_manager.gd" id="4_lr1fb"]
+[ext_resource type="Script" uid="uid://01sndo0sldrl" path="res://scripts/game_manager.gd" id="4_lr1fb"]
 [ext_resource type="FontFile" uid="uid://cp7l06yb4imun" path="res://assets/fonts/PixelOperator8.ttf" id="5_3nlwj"]
 [ext_resource type="Texture2D" uid="uid://jsif4mgyjmo" path="res://assets/sprites/coin.png" id="6_0v1v2"]
 [ext_resource type="AudioStream" uid="uid://c346iro815k3m" path="res://assets/music/time_for_adventure.mp3" id="6_2korr"]
